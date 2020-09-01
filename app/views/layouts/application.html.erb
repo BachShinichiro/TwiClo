@@ -9,9 +9,9 @@
 <body>
   <header>
     <ul>
-      <li><a href="#">トップページ</a></li>
-      <li><a href="#">アラサーの名言集</a></li>
-      <li><a href="#">お問い合わせ</a></li>
+      <li><%= link_to 'トップページ', posts_path %></li>
+      <li><%= link_to 'アラサーの名言集', 'https://4meee.com/articles/view/904172' %></li>
+      <li><%= link_to 'つぶやく', new_post_path %></li>
     </ul>
   </header>
   <%= yield %>

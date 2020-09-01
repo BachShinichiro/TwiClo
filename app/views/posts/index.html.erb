@@ -2,22 +2,27 @@
 
 <h1>アラサーのつぶやき</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
+      <th>Time</th>
       <th>Content</th>
-      <th colspan="3"></th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
     </tr>
   </thead>
 
   <tbody>
+
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <tr>
+          <td><%= l post.created_at %></td>
+          <td><%= post.content %></td>
+          <td><%= link_to '( ﾟ∀ ﾟ)', post %></td>
+          <td><%= link_to '(～￣▽￣)～', edit_post_path(post) %></td>
+          <td><%= link_to 'ヽ(`Д´)ﾉ', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
     <% end %>
   </tbody>
 </table>
