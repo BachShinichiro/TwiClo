@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>アラサーのつぶやき</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <ul>
+      <li><a href="#">トップページ</a></li>
+      <li><a href="#">アラサーの名言集</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </header>
+  <%= yield %>
+  <footer>
+    <p>運営会社アラサー株式会社</p>
+    <p>© 2020 AROUND_THIRTY</p>
+  </footer>
+</body>
+</html>
