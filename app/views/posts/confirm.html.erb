@@ -1,0 +1,8 @@
+<h3>Is this OK?</h3>
+<%= form_with(model: @post, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <p>本文:<%= @post.content %></p>
+  <%= form.submit  "submit" %>
+  <%= form.submit "back", name: 'back' %>
+
+<% end %>
